@@ -17,7 +17,7 @@ st.markdown(
         .input-container { background: white; color: black; border-radius: 6px; padding: 8px; width: 100%; display: flex; align-items: center; }
         .send-btn { background: #1e90ff; color: white; border: none; border-radius: 6px; padding: 10px 16px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
         .send-btn:hover { background: #0066cc; }
-        .button-container { display: flex; justify-content: flex-end; padding-top: 10px; }
+        .button-container { display: flex; justify-content: flex-start; padding-top: 10px; }
         .title-container { text-align: center; }
     </style>
     """,
@@ -44,7 +44,7 @@ with chat_box:
 # Entrada de usuario con formulario
 with st.form(key="formulario_chat", clear_on_submit=True):
     entrada_usuario = st.text_input("", placeholder="Pregunta al chatbot de gemini", key="entrada_usuario")
-    enviado = st.form_submit_button("🚀 Enviar", use_container_width=True)
+    enviado = st.form_submit_button("Enviar 🚀", use_container_width=True)
 
 if enviado and entrada_usuario.strip():
     st.session_state.chat_log.append({"rol": "usuario", "contenido": entrada_usuario})
@@ -52,9 +52,10 @@ if enviado and entrada_usuario.strip():
     st.session_state.chat_log.append({"rol": "bot", "contenido": respuesta})
     st.rerun()
 
-# Botón para reiniciar conversación alineado a la derecha
+# Botón para reiniciar conversación alineado a la izquierda
 st.markdown('<div class="button-container">', unsafe_allow_html=True)
-if st.button("🆕 Nueva conversación"):
+if st.button("🤔 Nueva conversación"):
     st.session_state.chat_log.clear()
     st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)
+
