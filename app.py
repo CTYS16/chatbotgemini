@@ -44,7 +44,7 @@ with chat_box:
 # Entrada de usuario con formulario
 with st.form(key="formulario_chat", clear_on_submit=True):
     entrada_usuario = st.text_input("", placeholder="Pregunta al chatbot de gemini", key="entrada_usuario")
-    enviado = st.form_submit_button("Enviar 🚀", use_container_width=True)
+    enviado = st.form_submit_button("🚀 Enviar", use_container_width=True)
 
 if enviado and entrada_usuario.strip():
     st.session_state.chat_log.append({"rol": "usuario", "contenido": entrada_usuario})
@@ -54,7 +54,7 @@ if enviado and entrada_usuario.strip():
 
 # Botón para reiniciar conversación alineado a la izquierda
 st.markdown('<div class="button-container">', unsafe_allow_html=True)
-if st.button("🤔 Nueva conversación"):
+if st.button("Nueva conversación 🤓"):
     st.session_state.chat_log.clear()
     st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)
