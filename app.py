@@ -54,7 +54,7 @@ if enviado and entrada_usuario.strip():
 
 # Botón para reiniciar conversación alineado a la izquierda
 st.markdown('<div class="button-container">', unsafe_allow_html=True)
-if st.button("🆕 Nueva conversación"):
+if st.button("Nueva conversación 🤓"):
     st.session_state.chat_log.clear()
     st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)
