@@ -32,7 +32,7 @@ def generar_respuesta(texto):
     modelo = genai.GenerativeModel("gemini-pro")
     return modelo.generate_content(texto).text
 
-st.title("Chatbot - Gemini AI 🤖")
+st.markdown("<h1 class='title-container'>Chatbot - Gemini AI 🤖</h1>", unsafe_allow_html=True)
 
 # Mostrar historial de chat
 chat_box = st.container()
