@@ -18,6 +18,7 @@ st.markdown(
         .send-btn { background: #1e90ff; color: white; border: none; border-radius: 6px; padding: 10px 16px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
         .send-btn:hover { background: #0066cc; }
         .button-container { display: flex; justify-content: flex-end; padding-top: 10px; }
+        .title-container { text-align: center; }
     </style>
     """,
     unsafe_allow_html=True
