@@ -13,7 +13,7 @@ st.markdown(
         body { background-color: #181818; color: #f5f5f5; font-family: 'Arial', sans-serif; }
         .chat-container { padding: 15px; border-radius: 10px; background: #242424; width: 85%; margin: 10px auto; }
         .msg-user { background: #d120e8; color: white; border-radius: 10px; padding: 10px; text-align: right; }
-        .msg-bot { background: #f1f1f1; color: black; border-radius: 10px; padding: 10px; text-align: left; }
+        .msg-bot { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); color: black; border-radius: 10px; padding: 10px; text-align: left; }
         .input-container { background: white; color: black; border-radius: 6px; padding: 8px; width: 100%; display: flex; align-items: center; }
         .send-btn { background: #1e90ff; color: white; border: none; border-radius: 6px; padding: 10px 16px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
         .send-btn:hover { background: #0066cc; }
@@ -54,8 +54,7 @@ if enviado and entrada_usuario.strip():
 
 # Botón para reiniciar conversación alineado a la izquierda
 st.markdown('<div class="button-container">', unsafe_allow_html=True)
-if st.button("Nueva conversación 🤓"):
+if st.button("🆕 Nueva conversación"):
     st.session_state.chat_log.clear()
     st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)
-
