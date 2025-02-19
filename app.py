@@ -32,7 +32,7 @@ def generar_respuesta(texto):
     modelo = genai.GenerativeModel("gemini-pro")
     return modelo.generate_content(texto).text
 
-st.markdown("<h1 class='title-container'>Chatbot - Gemini AI 🤖</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='title-container'>Chatbot - de recetas de cocina Gemini AI 🤖</h1>", unsafe_allow_html=True)
 
 # Mostrar historial de chat
 chat_box = st.container()
@@ -43,7 +43,7 @@ with chat_box:
 
 # Entrada de usuario con formulario
 with st.form(key="formulario_chat", clear_on_submit=True):
-    entrada_usuario = st.text_input("", placeholder="Pregunta al chatbot de gemini", key="entrada_usuario")
+    entrada_usuario = st.text_input("", placeholder="¿Que deseas saber sobre las recetas?", key="entrada_usuario")
     enviado = st.form_submit_button("🚀 Enviar", use_container_width=True)
 
 if enviado and entrada_usuario.strip():
